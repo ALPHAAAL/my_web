@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/my_web/static/media/HACKED.2f48abc8.ttf"
   },
   {
-    "revision": "fff2be153934ae4ea2e6",
-    "url": "/my_web/static/css/main.994a72bf.chunk.css"
+    "revision": "5655611847ed5929a39a",
+    "url": "/my_web/static/css/main.dcf57697.chunk.css"
   },
   {
     "revision": "40bacd71a3923f11c248",
@@ -24,8 +24,12 @@ self.__precacheManifest = [
     "url": "/my_web/static/media/background_white_code.6bfb4896.mov"
   },
   {
-    "revision": "fff2be153934ae4ea2e6",
-    "url": "/my_web/static/js/main.fff2be15.chunk.js"
+    "revision": "5655611847ed5929a39a",
+    "url": "/my_web/static/js/main.56556118.chunk.js"
+  },
+  {
+    "revision": "978b58317297c20b0ec524927a502c08",
+    "url": "/my_web/static/media/background-landscape.978b5831.jpg"
   },
   {
     "revision": "b11f35f77210c651367969365f87af24",
@@ -36,15 +40,11 @@ self.__precacheManifest = [
     "url": "/my_web/static/media/background-portrait.a768861a.jpg"
   },
   {
-    "revision": "978b58317297c20b0ec524927a502c08",
-    "url": "/my_web/static/media/background-landscape.978b5831.jpg"
-  },
-  {
     "revision": "b37d3891e0e420375abdb0c87ce5be2e",
     "url": "/my_web/static/media/profile_pic.b37d3891.jpg"
   },
   {
-    "revision": "ad5a61fc1ae86fce63a379b8e2f0ac22",
+    "revision": "11c801f6bbff091fe90df68068ba4cb8",
     "url": "/my_web/index.html"
   }
 ];
