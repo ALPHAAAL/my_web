@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/my_web/static/media/Trajan Pro Regular.b11f35f7.ttf"
   },
   {
-    "revision": "978b58317297c20b0ec524927a502c08",
-    "url": "/my_web/static/media/background-landscape.978b5831.jpg"
-  },
-  {
     "revision": "a768861ab71a487cf42b7d3038837f7d",
     "url": "/my_web/static/media/background-portrait.a768861a.jpg"
+  },
+  {
+    "revision": "978b58317297c20b0ec524927a502c08",
+    "url": "/my_web/static/media/background-landscape.978b5831.jpg"
   },
   {
     "revision": "b37d3891e0e420375abdb0c87ce5be2e",
