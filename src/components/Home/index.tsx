@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import background_white from '../../assets/background_white_code_trim_compressed.mov';
+// import background_white from '../../assets/background_white_code_trim_compressed.mov';
 import GithubIcon from '../../assets/github-mark.svg?react';
 import LinkedinIcon from '../../assets/LinkedIn_icon.svg?react';
 
