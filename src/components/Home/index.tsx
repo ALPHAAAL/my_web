@@ -8,11 +8,11 @@ const TYPING_TEXT_CLASS_NAME = "overflow-hidden whitespace-nowrap"; // TODO: Add
 
 export default function Home() {
     return (
-        <div className='h-full bg-gradient-to-tr to-blue-400 from-green-500'>
+        <div className='h-full'>
             {/* <video autoPlay muted loop className="absolute w-full h-full object-cover -z-50">
                 <source src={background_white} type="video/mp4" />
             </video> */}
-            <div className="ml-3 flex flex-col items-start">
+            <div className="flex flex-col items-start">
                 <h1 className='text-7xl sm:text-8xl font-extrabold bg-clip-text'>Alex Lau</h1>
                 <div className="font-extrabold text-2xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
                     I am a <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
