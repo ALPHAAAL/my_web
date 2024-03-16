@@ -1,0 +1,17 @@
+import GithubIcon from '../../assets/github-mark.svg?react';
+import LinkedinIcon from '../../assets/LinkedIn_icon.svg?react';
+
+export default function SocialRow() {
+    return (
+        <div className='mt-5 flex flex-row space-x-2 justify-around'>
+            <a className='flex' href="https://github.com/ALPHAAAL" target='_blank'>
+                <GithubIcon className="text-blue-500 hover:text-blue-700" width={24} height={24} />
+                <span className='ml-3'>Github</span>
+            </a>
+            <a className='flex' href="https://www.linkedin.com/in/alex-lau-a550a7134/" target='_blank'>
+                <LinkedinIcon className="text-blue-500 hover:text-blue-700" width={24} height={24} />
+                <span className='ml-3'>Linkedin</span>
+            </a>
+        </div>
+    );
+}

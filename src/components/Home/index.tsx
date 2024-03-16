@@ -1,8 +1,8 @@
 /// <reference types="vite-plugin-svgr/client" />
 
+import SocialRow from "../SocialRow";
+
 // import background_white from '../../assets/background_white_code_trim_compressed.mov';
-import GithubIcon from '../../assets/github-mark.svg?react';
-import LinkedinIcon from '../../assets/LinkedIn_icon.svg?react';
 
 const TYPING_TEXT_CLASS_NAME = "overflow-hidden whitespace-nowrap"; // TODO: Add this -> `border-r-4 border-r-white pr-2` for blinking cursor
 
@@ -25,14 +25,7 @@ export default function Home() {
                         </ul>
                     </span>
                 </div>
-                <div className='mt-5 flex flex-row space-x-2'>
-                    <a href="https://github.com/ALPHAAAL" target='_blank'>
-                        <GithubIcon className="text-blue-500 hover:text-blue-700" width={24} height={24} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/alex-lau-a550a7134/" target='_blank'>
-                        <LinkedinIcon className="text-blue-500 hover:text-blue-700" width={24} height={24} />
-                    </a>
-                </div>
+                <SocialRow />
             </div>
         </div>
     );
