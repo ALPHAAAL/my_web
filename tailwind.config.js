@@ -7,6 +7,14 @@ export default {
   theme: {
     extend: {
       keyframes: {
+        open: {
+          "0%": {
+            transform: 'scaleY(0)',
+          },
+          "100%": {
+            transform: 'scaleY(1)',
+          }
+        },
         typing: {
           "0%": {
             width: "0%",
@@ -45,6 +53,7 @@ export default {
         },
       },
       animation: {
+        'open-menu': 'open 0.25s',
         typewriter: "typing 2s steps(18), cursor .7s infinite",
         'text-slide-4': 'typing 2s linear alternate infinite, text-slide-4 16s steps(1) infinite', // 16s for text-slide-4 because 2s * 2 (alternate animation)
       }
