@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 import { createPortal } from "react-dom";
 import clsx from "clsx";
 
@@ -9,12 +9,13 @@ function Menu({ onMenuClose, isMenuOpen } : {
     onMenuClose: () => void,
     isMenuOpen: boolean,
 }) {
-    const shouldRender = useAnimationEndUnmmount('menu', isMenuOpen);
+    const ref = useRef<HTMLDivElement>(null);
+    const shouldRender = useAnimationEndUnmmount(ref, isMenuOpen, 'menu');
 
     // TODO: Check why enter-effect cannot use transition, but have to rely on `animate-open-menu`
     return shouldRender && createPortal(
         (
-            <div id='menu' className={clsx(isMenuOpen ? '' : 'scale-y-0', "animate-open-menu transition-all duration-[150ms] flex flex-col justify-around fixed border-2 rounded-2xl w-[90%] top-4 left-[5%] bg-slate-300 p-3")}>
+            <div ref={ref} id='menu' className={clsx(isMenuOpen ? 'animate-open-menu-corner' : 'animate-close-menu-corner', "flex flex-col justify-around fixed border-2 rounded-2xl w-[90%] top-4 left-[5%] bg-slate-300 p-3")}>
                 <div className="flex justify-between">
                     <p>Navigation</p>
                     <p onClick={() => onMenuClose()}>X</p>

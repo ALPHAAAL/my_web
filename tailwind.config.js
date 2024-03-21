@@ -15,6 +15,23 @@ export default {
             transform: 'scaleY(1)',
           }
         },
+        "open-corner": {
+          "0%": {
+            clipPath: 'circle(0% at 100% 0%)',
+          },
+          "100%": {
+            clipPath: 'circle(100%)',
+          }
+        },
+        "close-corner": {
+          "0%": {
+            clipPath: 'circle(100%)',
+          },
+          "100%": {
+            clipPath: 'circle(0% at 100% 0%)',
+          },
+
+        },
         typing: {
           "0%": {
             width: "0%",
@@ -54,6 +71,8 @@ export default {
       },
       animation: {
         'open-menu': 'open 0.25s',
+        'open-menu-corner': 'open-corner 0.5s',
+        'close-menu-corner': 'close-corner 0.5s',
         typewriter: "typing 2s steps(18), cursor .7s infinite",
         'text-slide-4': 'typing 2s linear alternate infinite, text-slide-4 16s steps(1) infinite', // 16s for text-slide-4 because 2s * 2 (alternate animation)
       }

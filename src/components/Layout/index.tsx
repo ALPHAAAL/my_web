@@ -15,7 +15,7 @@ export default function Layout() {
         isMenuOpen,
         setIsMenuOpen,
     };
-    const blurClassName = isMenuOpen ? ' blur-[3px]' : '';
+    const blurClassName = isMenuOpen ? 'transition-[filter] duration-[500ms] blur-[3px]' : 'blur-[0px] transition-[filter] duration-[500ms]';
 
     return (
         <AppContext.Provider value={value}>

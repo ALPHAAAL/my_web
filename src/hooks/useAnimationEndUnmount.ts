@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
 
-export function useAnimationEndUnmmount(id: string, isMounted: boolean) {
+export function useAnimationEndUnmmount(element: React.RefObject<HTMLDivElement>, isMounted: boolean, id: string) {
     const [shouldRender, setShouldRender] = useState(false);
 
     useEffect(() => {
-        const element = document.getElementById(id);
+        const inner = document.getElementById(id);
 
         if (isMounted && !shouldRender) {
             setShouldRender(true);
         } else if (!isMounted && shouldRender) {
-            if (!element) {
+            if (!inner) {
                 throw new Error('useAnimationEndUnmmount cannot find element id');
             }
 
             const handleAnimationEnd = () => {
+                // Make sure the element is hidden right after animation complete to avoid flickering UI
+                inner.classList.toggle('hidden');
                 setShouldRender(false);
             };
 
-            element.addEventListener('transitionend', handleAnimationEnd);
+            inner?.addEventListener('animationend', handleAnimationEnd);
 
             return () => {
-                element.removeEventListener('transitionend', handleAnimationEnd)
+                inner?.removeEventListener('animationend', handleAnimationEnd)
             };
         }
-    }, [id, isMounted, shouldRender]);
+    }, [id, element, isMounted, shouldRender]);
 
     return shouldRender;
 }
