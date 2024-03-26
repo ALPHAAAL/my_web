@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import clsx from 'clsx';
 
-import MyIcon from '../../assets/icon.svg?react';
-import DarkMode from '../../assets/theme-light-dark.svg?react';
+import MyIcon from '../../assets/icons/icon.svg?react';
+import DarkMode from '../../assets/icons/theme-light-dark.svg?react';
 
 import NavigationBar from "../NavigationBar";
 import NavigationMenu from '../NavigationMenu';
@@ -19,13 +19,15 @@ export default function Layout() {
 
     return (
         <AppContext.Provider value={value}>
-            <div className="h-max md:px-[10%] lg:px-[15%] bg-slate-800 text-green-300">
+            <div className="h-max md:px-[10%] lg:px-[15%] bg-slate-800 text-green-300 font-mono">
                 <div className={clsx("h-full flex flex-col bg-slate-900 px-5", blurClassName)}>
                     <div className="flex flex-col min-h-screen py-3">
-                        <div className="flex justify-between mb-5">
-                            <MyIcon className='text-white cursor-pointer' width={48} height={48} />
+                        <div className="flex justify-between mb-5 h-[40px]">
+                            <Link to='/'><MyIcon className='text-white cursor-pointer' width={40} height={40} /></Link>
                             <div className='flex'>
-                                <DarkMode className='text-white cursor-pointer' width={48} height={48} />
+                                <span className='flex justify-center w-[50px] border-2 rounded-3xl border-slate-800 p-2 mr-3'>
+                                    <DarkMode className='text-white cursor-pointer' width={20} height={20} />
+                                </span>
                                 <NavigationMenu />
                             </div>
                         </div>

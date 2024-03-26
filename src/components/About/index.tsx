@@ -6,8 +6,8 @@ export default function About() {
         <div>
             <div className="flex flex-col-reverse sm:flex-row w-full">
                 <div className='sm:w-[60%] sm:pr-3'>
-                    <h1 className="text-7xl font-bold">Alex Lau</h1>
-                    <div className='mt-6 leading-relaxed sm:leading-loose text-lg tracking-wider'>
+                    <h1 className="mt-3 text-6xl font-bold">Alex Lau</h1>
+                    <div className='mt-4 leading-relaxed sm:leading-loose text-lg tracking-wider'>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere tincidunt nulla in egestas. Etiam in aliquam ipsum, in sagittis ex. Duis fermentum commodo malesuada. Sed consequat magna eu nunc tempus ultrices. Vivamus nisi sem, varius non mi quis, tempor gravida ipsum. Vestibulum sodales, leo et ultrices pellentesque, lorem ipsum pharetra quam, quis dapibus neque felis eu diam. Nunc pellentesque massa eu nibh congue condimentum. Donec eget sem vitae neque dignissim eleifend. Aliquam quis lacus ante. Sed in lectus et dui elementum scelerisque sit amet eu leo. Fusce volutpat dolor et est viverra porttitor.
                         </p>

@@ -1,5 +1,5 @@
-import GithubIcon from '../../assets/github-mark.svg?react';
-import LinkedinIcon from '../../assets/LinkedIn_icon.svg?react';
+import GithubIcon from '../../assets/icons/github-mark.svg?react';
+import LinkedinIcon from '../../assets/icons/LinkedIn_icon.svg?react';
 
 export default function SocialRow() {
     return (

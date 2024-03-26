@@ -1,5 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 
+import ProfilePic from '../../assets/img/DSC01603.jpeg';
+
 import SocialRow from "../SocialRow";
 
 // import background_white from '../../assets/background_white_code_trim_compressed.mov';
@@ -13,7 +15,7 @@ export default function Home() {
                 <source src={background_white} type="video/mp4" />
             </video> */}
             <div className="flex flex-col items-start">
-                <h1 className='text-7xl sm:text-8xl font-extrabold bg-clip-text'>Alex Lau</h1>
+                <h1 className='text-6xl sm:text-8xl font-extrabold bg-clip-text'>Alex Lau</h1>
                 <div className="font-extrabold text-2xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
                     I am a <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
                         <ul className="block animate-text-slide-4 text-left leading-tight [&_li]:block">
@@ -26,6 +28,12 @@ export default function Home() {
                     </span>
                 </div>
                 <SocialRow />
+                <div>
+                    <img src={ProfilePic} loading='lazy' />
+                    <img src={ProfilePic} loading='lazy' />
+                    <img src={ProfilePic} loading='lazy' />
+                    <img src={ProfilePic} loading='lazy' />
+                </div>
             </div>
         </div>
     );
