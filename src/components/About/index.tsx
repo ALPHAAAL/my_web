@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ImageMap from '../../assets/img/hash-source-map'
 import LazyImage from '../LazyImage';
 
@@ -11,13 +12,13 @@ export default function About() {
                     <h1 className="mt-3 text-6xl font-bold">Alex Lau</h1>
                     <div className='mt-4 leading-relaxed sm:leading-loose text-lg tracking-wider'>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere tincidunt nulla in egestas. Etiam in aliquam ipsum, in sagittis ex. Duis fermentum commodo malesuada. Sed consequat magna eu nunc tempus ultrices. Vivamus nisi sem, varius non mi quis, tempor gravida ipsum. Vestibulum sodales, leo et ultrices pellentesque, lorem ipsum pharetra quam, quis dapibus neque felis eu diam. Nunc pellentesque massa eu nibh congue condimentum. Donec eget sem vitae neque dignissim eleifend. Aliquam quis lacus ante. Sed in lectus et dui elementum scelerisque sit amet eu leo. Fusce volutpat dolor et est viverra porttitor.
+                            Hi there! I am a software engineer from Hong Kong with a passion for developing high-performance software and crafting fluid web application with React. I have experience in building an experimental 2D vector graphics renderer with Rust + WebGPU + WASM, and since that project, I fell in love with computer graphics and Rust, so in my free time, I like to watch YouTube tutorials about those topics and implement related fun projects.
                         </p>
                         <p className='mt-3'>
-                            Integer fringilla enim justo, nec ullamcorper enim fringilla at. Donec ullamcorper mollis varius. Curabitur vitae magna nec mi dignissim suscipit eget sed lorem. Nam interdum consequat luctus. Cras vel nisl eu mi dignissim pellentesque et non velit. Fusce et accumsan elit, eu ultricies enim. Sed malesuada eget ex vel pellentesque. Maecenas consectetur vel massa in fringilla. Quisque a lacus mattis libero pulvinar commodo quis sed urna. Proin at nulla sapien.
+                            Outside of my programming life, I have a wide range of hobbies that keep my mind and body engaged. From reading books, to doing digital paintings, and hiking around the world for beautiful landscape photos (Checkout my photos <Link className='italic underline' to='/gallery'>here</Link>!). I always keep an open-mind for experiencing and learning something new, so that I can get a multifaceted perspective in life, and towards different problems.
                         </p>
                         <p className='mt-3'>
-                            Mauris malesuada purus tristique pretium convallis. Mauris rutrum leo vel metus malesuada, et ullamcorper libero vulputate. Maecenas pharetra vitae est non hendrerit. Fusce nec nulla enim. Etiam rutrum sem a neque venenatis tincidunt. Vestibulum sed eros purus. Integer cursus dictum ullamcorper. Maecenas eu metus ut nulla ornare tristique sit amet mollis risus.
+                            I also like to keep a blog of the fun / difficult problems that I have encountered during my work / personal projects, so feel free to check out my <Link className='italic underline' to='/blog'>Blog</Link> section, and share your thoughts to me! :)
                         </p>
                     </div>
                 </div>

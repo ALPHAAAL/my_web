@@ -26,8 +26,8 @@ function Menu({ onMenuClose, isMenuOpen }: {
                 <nav>
                     <ul className="divide-y-[1px] py-2 divide-slate-800 text-base text-slate-300">
                         <li className="py-1"><Link onClick={onMenuClose} to="/about">About</Link></li>
-                        <li className="py-1"><Link onClick={onMenuClose} to="/about">Gallery</Link></li>
-                        <li className="py-1"><Link onClick={onMenuClose} to="/about">Blog</Link></li>
+                        <li className="py-1"><Link onClick={onMenuClose} to="/gallery">Gallery</Link></li>
+                        <li className="py-1"><Link onClick={onMenuClose} to="/blog">Blog</Link></li>
                     </ul>
                 </nav>
             </div>
