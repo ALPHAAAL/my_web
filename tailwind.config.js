@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
+      },
       keyframes: {
         open: {
           "0%": {
@@ -13,6 +18,14 @@ export default {
           },
           "100%": {
             transform: 'scaleY(1)',
+          }
+        },
+        'fill': {
+          "0%": {
+            opacity: '0%',
+          },
+          "100%": {
+            opacity: '100%',
           }
         },
         "open-corner": {
@@ -30,7 +43,6 @@ export default {
           "100%": {
             clipPath: 'circle(0% at 100% 0%)',
           },
-
         },
         typing: {
           "0%": {
@@ -70,6 +82,7 @@ export default {
         },
       },
       animation: {
+        'text-fill': 'fill 1.5s linear',
         'open-menu': 'open 0.25s',
         'open-menu-corner': 'open-corner 0.5s',
         'close-menu-corner': 'close-corner 0.5s',
