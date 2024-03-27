@@ -1,4 +1,6 @@
-import ProfilePic from '../../assets/img/DSC01603.jpeg';
+import ImageMap from '../../assets/img/hash-source-map'
+import LazyImage from '../LazyImage';
+
 import SocialRow from '../SocialRow';
 
 export default function About() {
@@ -20,9 +22,9 @@ export default function About() {
                     </div>
                 </div>
                 <div className='sm:w-[40%]'>
-                    <img src={ProfilePic} />
+                    <LazyImage src={ImageMap.ProfilePic.src} placeholderImage={ImageMap.ProfilePic.hash} />
                     <div>
-                        <SocialRow />
+                        <SocialRow className='mt-3' />
                     </div>
                 </div>
             </div>

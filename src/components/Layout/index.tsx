@@ -36,9 +36,9 @@ export default function Layout() {
                         </div>
                     </div>
                     <div className="pb-3 border-t border-green-300" />
-                    <div className="flex sm:px-5 sm:justify-between justify-around">
-                        <h1 className="hidden sm:block sm:w-[40%] text-center">Wisdom has been chasing me, but I have alawys been faster.</h1>
-                        <h1 className="sm:w-[40%] text-center">
+                    <div className="flex text-xs text-center mt-5 mb-8 sm:px-5 sm:justify-between justify-around">
+                        <h1 className="hidden sm:block sm:w-[30%]">Wisdom has been chasing me, but I have alawys been faster.</h1>
+                        <h1 className="sm:w-[30%]">
                             Built with React & Tailwind CSS <br />
                             2024 Alex Lau. All rights reserved.
                         </h1>
