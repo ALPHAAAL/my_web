@@ -16,7 +16,7 @@ export default function Home() {
             </video> */}
             <div className="flex flex-col items-start">
                 {/* <h1 className='text-6xl sm:text-8xl font-extrabold bg-clip-text'>Alex Lau</h1> */}
-                <svg height="100" fill="transparent" stroke="currentColor" stroke-width="2" className="stroke-fill-animation text-6xl sm:text-8xl font-extrabold bg-clip-text" width="100%">
+                <svg height="100" fill="transparent" stroke="currentColor" stroke-width="2" className="stroke-fill-animation text-6xl sm:text-8xl font-bold bg-clip-text" width="100%">
                     <text dominant-baseline="middle" y="50%">Alex Lau</text>
                 </svg>
                 <div className="font-extrabold text-2xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
