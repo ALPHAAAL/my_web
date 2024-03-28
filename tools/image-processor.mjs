@@ -1,21 +1,43 @@
 import * as ThumbHash from 'thumbhash';
 import sharp from 'sharp';
-import fs from 'fs/promises'
+import fs from 'fs'
+import path from 'path';
 
+const BASE_DIR = 'photos';
+const ASSETS_DIR = path.join('./', '..', 'src', 'assets', 'img');
+const PUBLIC_ASSETS_DIR = path.join('./', '..', 'public', 'assets', 'images');
 
-const filepath = '/Users/genius/Projects/javascript/my_web/src/assets/img/DSC01603.jpeg';
+async function generateHash() {
+    const photos = fs.readdirSync(BASE_DIR);
+    let json = {};
 
-// Image to ThumbHash
-const image = sharp(filepath).resize(100, 100, { fit: 'inside' })
-const { data, info } = await image.ensureAlpha().raw().toBuffer({ resolveWithObject: true })
-const binaryThumbHash = ThumbHash.rgbaToThumbHash(info.width, info.height, data)
-console.log('binaryThumbHash:', Buffer.from(binaryThumbHash))
+    for (const imagePath of photos.filter(file => !file.includes('.webp'))) {
+        const image = sharp(path.join(BASE_DIR, imagePath));
+        const imageForHash = image.resize(100, 100, { fit: 'inside' });
+        const { data, info } = await imageForHash.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+        const binaryThumbHash = ThumbHash.rgbaToThumbHash(info.width, info.height, data);
+        const thumbHashToBase64 = Buffer.from(binaryThumbHash).toString('base64');
 
-// If you want to use base64 instead of binary...
-const thumbHashToBase64 = Buffer.from(binaryThumbHash).toString('base64')
-const thumbHashFromBase64 = Buffer.from(thumbHashToBase64, 'base64')
-console.log('thumbHashToBase64:', thumbHashToBase64)
+        const imageToBeResize = sharp(path.join(BASE_DIR, imagePath));
+        const meta = await imageToBeResize.metadata();
+        const width = meta.width;
+        const height = meta.height;
+        const imageBasename = path.parse(imagePath).name;
 
-// ThumbHash to data URL (can be done on the client, not the server)
-const placeholderURL = ThumbHash.thumbHashToDataURL(binaryThumbHash)
-console.log('placeholderURL:', placeholderURL)
+        if (!fs.existsSync(path.join(PUBLIC_ASSETS_DIR, `${imageBasename}.webp`))) {
+            imageToBeResize.webp().toFile(path.join(PUBLIC_ASSETS_DIR, `${imageBasename}.webp`));
+        }
+
+        json[imageBasename] = {
+            name: imageBasename,
+            hash: thumbHashToBase64,
+            width,
+            height,
+        };
+    }
+
+    console.log(json);
+    fs.writeFileSync(path.join(ASSETS_DIR, 'images.json'), JSON.stringify(json));
+}
+
+generateHash();
