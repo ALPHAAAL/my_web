@@ -21,7 +21,7 @@ function BlogPostRow({ key }: BlodPostRowProp) {
                 <p>Today</p>
                 <div className="hidden mt-3 w-[100px] h-[100px] bg-cyan-400 sm:block"></div>
             </div>
-            <div className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5">
+            <div className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5 cursor-pointer">
                 <p className="font-bold">Title</p>
                 <p className="text-sm">Description</p>
                 <div className="text-xs flex flex-row [&>*]:mr-1">

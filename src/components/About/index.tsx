@@ -1,9 +1,92 @@
 import { Link } from 'react-router-dom';
 
-import ImageMap from '../../assets/img/hash-source-map'
+import ImageMap, { hashToDataUrl } from '../../assets/img/hash-source-map'
+import WorkIcon from '../../assets/icons/work.svg?react';
 
 import LazyImage from '../LazyImage';
 import SocialRow from '../SocialRow';
+
+type JobRole = {
+    key: React.Key;
+    companyName: string;
+    icon: React.ReactNode;
+    titles: {
+        title: string;
+        duration: string;
+    }[];
+}
+
+const VyondIcon = <LazyImage className='mr-3' width={35} height={35} src='assets/images/vyond.webp' placeholderImage={hashToDataUrl("X+sGDwJXSIeHeIiAepp32FeGhIr3qHgP")} />;
+const BenoveltyIcon = <LazyImage className='mr-3' width={35} height={35} src='assets/images/benovelty.webp' />;
+const VYOND_ROLES = [
+    {
+        title: 'Senior Software Engineer I',
+        duration: 'Aug 2023 - Present',
+    },
+    {
+        title: 'Software Engineer II',
+        duration: 'Jan 2022 - Sept 2023',
+    },
+    {
+        title: 'Software Engineer I',
+        duration: 'Jun 2021 - Dec 2021',
+    },
+];
+const BN_ROLES = [
+    {
+        title: 'Fullstack Software Engineer',
+        duration: 'Jul 2020 - Jun 2021',
+    },
+    {
+        title: 'Applcaition Developer (PT)',
+        duration: 'Mar 2018 - Jun 2020',
+    },
+    {
+        title: 'Application Developer Intern',
+        duration: 'Jan 2018 - Feb 2018',
+    },
+];
+
+function JobRow(props: JobRole) {
+    const {
+        key,
+        companyName,
+        titles,
+        icon,
+    } = props;
+
+    return (
+        <div key={key} className='flex flex-row w-full items-center'>
+            {icon}
+            <div className='w-full'>
+                <h1 className='text-sm font-semibold'>{companyName}</h1>
+                {titles.map(({title, duration}) => (
+                    <div key={title} className='flex flex-col mt-1 sm:flex-row justify-between sm:mt-2 text-xs'>
+                        <p>{title}</p>
+                        <p className='mt-1 text-green-300/60 sm:mt-0'>{duration}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function ExperienceSection() {
+    return (
+        <div className='sm:pl-10 mt-5'>
+            <div className='w-full border-[0.5px] border-slate-50/25 p-6'>
+                <div className='flex flex-row pb-3 border-b-[0.5px] border-slate-50/25'>
+                    <WorkIcon className='mr-3' width={28} height={28} />
+                    <h1>Work</h1>
+                </div>
+                <ol className='mt-5 [&>*]:mt-3'>
+                    <li><JobRow key='vyond' companyName='Vyond' titles={VYOND_ROLES} icon={VyondIcon} /></li>
+                    <li><JobRow key='bn' companyName='beNovelty' titles={BN_ROLES} icon={BenoveltyIcon} /></li>
+                </ol>
+            </div>
+        </div>
+    )
+}
 
 export default function About() {
     return (
@@ -27,7 +110,10 @@ export default function About() {
                             </p>
                         </div>
                     </div>
-                    <SocialRow />
+                    <div className='flex flex-col'>
+                        <SocialRow />
+                        <ExperienceSection />
+                    </div>
                 </div>
             </div>
         </div>

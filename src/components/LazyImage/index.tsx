@@ -1,15 +1,15 @@
 import React, { useMemo } from "react"
 
 type LazyImageProps = React.ComponentProps<'img'> & {
-    placeholderImage: string;
+    placeholderImage?: string;
 };
 
 export default function LazyImage(props: LazyImageProps) {
-    const { placeholderImage, src, width, height } = props;
+    const { placeholderImage, src, width, height, className } = props;
 
     const style: React.CSSProperties = useMemo(() => {
         return {
-            backgroundImage: `url(${placeholderImage})`,
+            backgroundImage: placeholderImage ? `url(${placeholderImage})` : undefined,
             color: 'transparent',
             backgroundSize: 'cover',
             backgroundPosition: '50% 50%',
@@ -18,6 +18,6 @@ export default function LazyImage(props: LazyImageProps) {
     }, [placeholderImage]);
 
     return (
-        <img style={style} src={src} loading="lazy" width={width} height={height} />
+        <img className={className} style={style} src={src} loading="lazy" width={width} height={height} />
     )
 }
