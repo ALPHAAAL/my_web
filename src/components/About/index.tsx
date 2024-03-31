@@ -7,7 +7,6 @@ import LazyImage from '../LazyImage';
 import SocialRow from '../SocialRow';
 
 type JobRole = {
-    key: React.Key;
     companyName: string;
     icon: React.ReactNode;
     titles: {
@@ -49,14 +48,13 @@ const BN_ROLES = [
 
 function JobRow(props: JobRole) {
     const {
-        key,
         companyName,
         titles,
         icon,
     } = props;
 
     return (
-        <div key={key} className='flex flex-row w-full items-center'>
+        <div className='flex flex-row w-full items-center'>
             {icon}
             <div className='w-full'>
                 <h1 className='text-sm font-semibold'>{companyName}</h1>
