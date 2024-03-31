@@ -19,7 +19,7 @@ export default function Layout() {
 
     return (
         <AppContext.Provider value={value}>
-            <div className="h-max md:px-[10%] lg:px-[15%] bg-slate-800 text-green-300 font-mono">
+            <div onClick={() => isMenuOpen && setIsMenuOpen(false)} className="h-max md:px-[10%] lg:px-[15%] bg-slate-800 text-green-300 font-mono">
                 <div className={clsx("h-full flex flex-col bg-slate-900 px-5", blurClassName)}>
                     <div className="flex flex-col min-h-screen py-3">
                         <div className="flex justify-between mb-5 h-[40px]">
