@@ -7,7 +7,7 @@ import IMAGE_JSON from '../../assets/img/images.json';
 
 const images = Object.values(IMAGE_JSON).map(({ name, hash }) => {
     return (
-        <LazyImage key={hash} src={`/assets/images/${name}.webp`} placeholderImage={hashToDataUrl(hash)} className=' max-h-[400px]' />
+        <LazyImage key={hash} src={`/assets/images/${name}.webp`} placeholderImage={hashToDataUrl(hash)} className='max-h-[300px] xl:max-h-[400px]' />
     );
 });
 const mobileImages = Object.values(IMAGE_JSON).map(({ name, hash }) => {
@@ -38,10 +38,10 @@ export default function Home() {
                     </span>
                 </div>
                 <SocialRow className='mt-3' shouldShowName={false} />
-                <div className='hidden -translate-x-[15%] w-[calc(100vw)] sm:flex flex-col sm:flex-row mt-3 sm:mt-48 sm:overflow-scroll scroll-smooth scrollbar-hide [&>*]:mr-8'>
+                <div className='hidden md:-translate-x-[10%] lg:-translate-x-[15%] w-screen sm:flex sm:flex-row py-10 sm:py-20 sm:overflow-scroll scroll-smooth scrollbar-hide [&>*]:mr-8'>
                     {images}
                 </div>
-                <div className='grid grid-cols-2 gap-x-5 gap-y-3 mt-3 sm:hidden'>
+                <div className='grid grid-cols-2 gap-x-5 gap-y-3 mt-12 sm:hidden'>
                     {mobileImages}
                 </div>
             </div>

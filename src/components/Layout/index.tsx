@@ -31,7 +31,7 @@ export default function Layout() {
                                 <NavigationMenu />
                             </div>
                         </div>
-                        <div className="grow">
+                        <div className="grow mt-16 sm:mt-24">
                             <Outlet />
                         </div>
                     </div>

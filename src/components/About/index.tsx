@@ -90,13 +90,13 @@ export default function About() {
     return (
         <div>
             <div className="w-full sm:mt-10">
-                <div className='grid grid-cols-1 gap-y-6 sm:pr-3 sm:grid-cols-2 sm:grid-rows-[auto_1fr]'>
-                    <div className='sm:col-start-2 sm:pl-10'>
+                <div className='grid grid-cols-1 gap-y-6 sm:pr-3 lg:grid-cols-2 lg:grid-rows-[auto_1fr]'>
+                    <div className='lg:col-start-2 lg:pl-10'>
                         <LazyImage src={ImageMap.ProfilePic.src} placeholderImage={ImageMap.ProfilePic.hash} />
                     </div>
-                    <div className='sm:col-start-1 sm:row-start-1 sm:row-span-2'>
+                    <div className='lg:col-start-1 lg:row-start-1 lg:row-span-2'>
                         <h1 className="mt-3 text-6xl font-bold">Alex Lau</h1>
-                        <div className='mt-4 leading-relaxed sm:leading-loose text-lg tracking-wider'>
+                        <div className='mt-4 leading-relaxed lg:leading-loose text-lg tracking-wider'>
                             <p>
                                 Hi there! I am a software engineer from Hong Kong with a passion for developing high-performance software and crafting fluid web application with React. I have experience in building an experimental 2D vector graphics renderer with Rust + WebGPU + WASM, and since that project, I fell in love with computer graphics and Rust, so in my free time, I like to watch YouTube tutorials about those topics and implement related fun projects.
                             </p>
