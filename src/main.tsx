@@ -7,6 +7,7 @@ import {
 
 import About from './components/About';
 import Blog from './components/Blog';
+import BlogContent from './components/BlogContent';
 import Home from './components/Home'
 import Gallery from './components/Gallery';
 import Layout from './components/Layout';
@@ -16,23 +17,27 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Layout />),
+    Component: Layout,
     children: [
       {
-        path: "/",
-        element: (<Home />),
+        path: "",
+        Component: Home,
       },
       {
-        path: "/about",
-        element: (<About />),
+        path: "about",
+        Component: About,
       },
       {
-        path: "/blog",
-        element: (<Blog />),
+        path: "blog",
+        Component: Blog,
       },
       {
-        path: "/gallery",
-        element: (<Gallery />),
+        path: 'blog/:id',
+        Component: BlogContent,
+      },
+      {
+        path: "gallery",
+        Component: Gallery,
       },
     ]
   },

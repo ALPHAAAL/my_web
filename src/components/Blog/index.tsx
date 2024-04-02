@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
 import CaretIcon from '../../assets/icons/caret-icon.svg?react';
+
+import MD_JSON from '../../assets/markdown.json';
 
 type TagProp = {
     children: React.ReactNode;
@@ -10,27 +13,33 @@ function Tag({ children }: TagProp) {
     )
 }
 
-type BlodPostRowProp = {
-    key: React.Key
+type BlogPostRowType = {
+    title: string;
+    description: string;
+    tags: string[];
+    readingTime: number;
 }
 
-function BlogPostRow({ key }: BlodPostRowProp) {
+function BlogPostRow(props: BlogPostRowType) {
+    const { title, description, tags, readingTime } = props;
+    const navigate = useNavigate();
+
     return (
-        <div key={key} className="grid sm:grid-cols-5 my-3">
+        <div className="grid sm:grid-cols-5 my-3">
             <div className="flex flex-col sm:p-3">
                 <p>Today</p>
                 <div className="hidden mt-3 w-[100px] h-[100px] bg-cyan-400 sm:block"></div>
             </div>
-            <div className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5 cursor-pointer">
-                <p className="font-bold">Title</p>
-                <p className="text-sm">Description</p>
+            <div onClick={() => navigate('react_caveats')} className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5 cursor-pointer">
+                <p className="font-bold">{title}</p>
+                <p className="text-sm">{description}</p>
                 <div className="text-xs flex flex-row [&>*]:mr-1">
-                    <Tag>Tags 1</Tag>
-                    <Tag>Tags 2</Tag>
-                    <Tag>Tags 3</Tag>
+                    {
+                        tags.map((tag) => <Tag>{tag}</Tag>)
+                    }
                 </div>
                 <div className="flex flex-row justify-between">
-                    <p className="text-sm">{Math.floor(Math.random() * 30)} minutes</p>
+                    <p className="text-sm">{readingTime} minutes</p>
                     <CaretIcon className="-rotate-90" width={30} height={30} />
                 </div>
             </div>
@@ -39,14 +48,12 @@ function BlogPostRow({ key }: BlodPostRowProp) {
 }
 
 export default function Blog() {
-    const posts = new Array(5).fill(0);
-
     return (
         <div>
             <p>Blog page under construction :P</p>
             <h1 className='mt-3 text-4xl'>My thoughts on programming, books, and fun things in life</h1>
             <div className="mt-16 sm:border-l-[0.5px] sm:border-l-slate-700 sm:pl-4 sm:mt-20">
-                {posts.map((_, i) => <BlogPostRow key={i} />)}
+                {MD_JSON.map((data) => <BlogPostRow key={data.name} title={data.name} description={data.description} readingTime={data.readingTime} tags={data.tags} />)}
             </div>
         </div>
     )

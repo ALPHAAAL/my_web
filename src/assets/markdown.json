@@ -1,0 +1,8 @@
+[
+    {
+        "name": "react_caveats",
+        "description": "Some caveats on react useCallback / useMemo hook and re-renders",
+        "tags": ["react"],
+        "readingTime": 5
+    }
+]
