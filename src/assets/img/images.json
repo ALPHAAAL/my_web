@@ -1,1 +1,114 @@
-{"2019_mid_autumn_moon":{"name":"2019_mid_autumn_moon","hash":"AwgGBIAH2Ed3iHeBfYgHd3FwFw==","width":1352,"height":818},"2019_sai_kung_east_dam_vibrance_vignette":{"name":"2019_sai_kung_east_dam_vibrance_vignette","hash":"VdcNHIJVeIePeIdZeXZoUFgEgw==","width":5460,"height":3071},"3_color_v1":{"name":"3_color_v1","hash":"jPcJLQZ4d594h3hId3GIt3eAhQdY","width":4000,"height":6000},"DSC02378":{"name":"DSC02378","hash":"V9cNLoR4d4d/d4h5h4iGaIeHhnBoCcc=","width":2160,"height":1728},"IMG_0794":{"name":"IMG_0794","hash":"kRgKJYRmeXd9iIeAejh4jER0QGQH","width":6000,"height":4000},"Isle_Of_May_Cliff_Vibrant_Ig":{"name":"Isle_Of_May_Cliff_Vibrant_Ig","hash":"HMcJJIK6iIdvhnh8l5ZysDcDaw==","width":6000,"height":3750},"Konigsee_woods_warm_fall":{"name":"Konigsee_woods_warm_fall","hash":"BggGDYIJlzhtiIeFeEV3iEdghwaH","width":6000,"height":4000},"Lake_Bled_June_2019_Sunrise":{"name":"Lake_Bled_June_2019_Sunrise","hash":"2fcJFYRld3iOh4iMiAiIeDCoCKOK","width":6000,"height":4000},"Milos_Sarakiniko_Me_Sunset":{"name":"Milos_Sarakiniko_Me_Sunset","hash":"HfgJFYKkeHd/d4iMaBeIdqAmBGtA","width":4032,"height":3024},"Milos_Sarakiniko_Silky_Water_BW":{"name":"Milos_Sarakiniko_Silky_Water_BW","hash":"GwgOBYBmiIifd3ekeWd3ZQAAAAAA","width":6000,"height":4000},"Puffin_dark":{"name":"Puffin_dark","hash":"R9cFDAIopocJqIapl5fYdI889w==","width":1188,"height":2017},"Scotland_Bass_Rock_Dark_High_Contrast":{"name":"Scotland_Bass_Rock_Dark_High_Contrast","hash":"UecJDYCKh4h/eIdJZZh1d4NgVQlW","width":6000,"height":4000},"Switzerland_Zermatt_2018_ori":{"name":"Switzerland_Zermatt_2018_ori","hash":"YecNHYSLd3h/h4iGh3iIZniQlgZp","width":3648,"height":2736},"bled_sunrise_bridge":{"name":"bled_sunrise_bridge","hash":"HPgNDQJ2eI+HiIl4iGV3pxBzBECH","width":4000,"height":6000},"first_edit_dark_v2":{"name":"first_edit_dark_v2","hash":"S9cJDgAItxi3aHeId3l2h4h35493r7c=","width":3333,"height":4166},"milkyway_v1":{"name":"milkyway_v1","hash":"jecFFARgJqq2eGtWiIeAmgW4eg==","width":2982,"height":5016}}
+{
+    "2019_mid_autumn_moon": {
+        "name": "2019_mid_autumn_moon",
+        "hash": "AwgGBIAH2Ed3iHeBfYgHd3FwFw==",
+        "width": 1352,
+        "height": 818,
+        "coordinates": [22.364220754871923, 114.37296101648073]
+    },
+    "2019_sai_kung_east_dam_vibrance_vignette": {
+        "name": "2019_sai_kung_east_dam_vibrance_vignette",
+        "hash": "VdcNHIJVeIePeIdZeXZoUFgEgw==",
+        "width": 5460,
+        "height": 3071,
+        "coordinates": [22.364220754871923, 114.37296101648073]
+    },
+    "3_color_v1": {
+        "name": "3_color_v1",
+        "hash": "jPcJLQZ4d594h3hId3GIt3eAhQdY",
+        "width": 4000,
+        "height": 6000,
+        "coordinates": [35.43167669697985, 138.90319717975024]
+    },
+    "DSC02378": {
+        "name": "DSC02378",
+        "hash": "V9cNLoR4d4d/d4h5h4iGaIeHhnBoCcc=",
+        "width": 2160,
+        "height": 1728,
+        "coordinates": [47.566324470845636, 13.649596639977283]
+    },
+    "IMG_0794": {
+        "name": "IMG_0794",
+        "hash": "kRgKJYRmeXd9iIeAejh4jER0QGQH",
+        "width": 6000,
+        "height": 4000,
+        "coordinates": [39.72138253626133, 21.634741657240383]
+    },
+    "Isle_Of_May_Cliff_Vibrant_Ig": {
+        "name": "Isle_Of_May_Cliff_Vibrant_Ig",
+        "hash": "HMcJJIK6iIdvhnh8l5ZysDcDaw==",
+        "width": 6000,
+        "height": 3750,
+        "coordinates": [56.18564794208501, -2.559457093813127]
+    },
+    "Konigsee_woods_warm_fall": {
+        "name": "Konigsee_woods_warm_fall",
+        "hash": "BggGDYIJlzhtiIeFeEV3iEdghwaH",
+        "width": 6000,
+        "height": 4000,
+        "coordinates": [47.554094371350466, 12.992616383374376]
+    },
+    "Lake_Bled_June_2019_Sunrise": {
+        "name": "Lake_Bled_June_2019_Sunrise",
+        "hash": "2fcJFYRld3iOh4iMiAiIeDCoCKOK",
+        "width": 6000,
+        "height": 4000,
+        "coordinates": [46.36790829748465, 14.09028245728108]
+    },
+    "Milos_Sarakiniko_Me_Sunset": {
+        "name": "Milos_Sarakiniko_Me_Sunset",
+        "hash": "HfgJFYKkeHd/d4iMaBeIdqAmBGtA",
+        "width": 4032,
+        "height": 3024,
+        "coordinates": [46.36790829748465, 14.09028245728108]
+    },
+    "Milos_Sarakiniko_Silky_Water_BW": {
+        "name": "Milos_Sarakiniko_Silky_Water_BW",
+        "hash": "GwgOBYBmiIifd3ekeWd3ZQAAAAAA",
+        "width": 6000,
+        "height": 4000,
+        "coordinates": [39.287331706727116, 20.339684495626514]
+    },
+    "Puffin_dark": {
+        "name": "Puffin_dark",
+        "hash": "R9cFDAIopocJqIapl5fYdI889w==",
+        "width": 1188,
+        "height": 2017,
+        "coordinates": [56.18564794208501, -2.559457093813127]
+    },
+    "Scotland_Bass_Rock_Dark_High_Contrast": {
+        "name": "Scotland_Bass_Rock_Dark_High_Contrast",
+        "hash": "UecJDYCKh4h/eIdJZZh1d4NgVQlW",
+        "width": 6000,
+        "height": 4000,
+        "coordinates": [56.07639997892762, -2.6405174939661884]
+    },
+    "Switzerland_Zermatt_2018_ori": {
+        "name": "Switzerland_Zermatt_2018_ori",
+        "hash": "YecNHYSLd3h/h4iGh3iIZniQlgZp",
+        "width": 3648,
+        "height": 2736,
+        "coordinates": [45.97687102588199, 7.66089804268287]
+    },
+    "bled_sunrise_bridge": {
+        "name": "bled_sunrise_bridge",
+        "hash": "HPgNDQJ2eI+HiIl4iGV3pxBzBECH",
+        "width": 4000,
+        "height": 6000,
+        "coordinates": [46.36790829748465, 14.09028245728108]
+    },
+    "first_edit_dark_v2": {
+        "name": "first_edit_dark_v2",
+        "hash": "S9cJDgAItxi3aHeId3l2h4h35493r7c=",
+        "width": 3333,
+        "height": 4166,
+        "coordinates": [46.378813302789084, 13.838457536045542]
+    },
+    "milkyway_v1": {
+        "name": "milkyway_v1",
+        "hash": "jecFFARgJqq2eGtWiIeAmgW4eg==",
+        "width": 2982,
+        "height": 5016,
+        "coordinates": [22.364220754871923, 114.37296101648073]
+    }
+}
