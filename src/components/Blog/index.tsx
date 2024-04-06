@@ -35,7 +35,7 @@ function BlogPostRow(props: BlogPostRowType) {
                 <p className="text-sm">{description}</p>
                 <div className="text-xs flex flex-row [&>*]:mr-1">
                     {
-                        tags.map((tag) => <Tag>{tag}</Tag>)
+                        tags.map((tag) => <Tag key={tag}>{tag}</Tag>)
                     }
                 </div>
                 <div className="flex flex-row justify-between">

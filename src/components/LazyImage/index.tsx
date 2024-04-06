@@ -18,6 +18,6 @@ export default function LazyImage(props: LazyImageProps) {
     }, [placeholderImage]);
 
     return (
-        <img className={className} style={style} src={src} loading="lazy" width={width} height={height} />
+        <img className={className} style={style} src={src} decoding="async" loading="lazy" width={width} height={height} />
     )
 }
