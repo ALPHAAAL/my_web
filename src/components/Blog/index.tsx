@@ -18,16 +18,17 @@ type BlogPostRowType = {
     description: string;
     tags: string[];
     readingTime: number;
+    createAt: Date;
 }
 
 function BlogPostRow(props: BlogPostRowType) {
-    const { title, description, tags, readingTime } = props;
+    const { title, description, tags, readingTime, createAt } = props;
     const navigate = useNavigate();
 
     return (
         <div className="grid sm:grid-cols-5 my-3">
             <div className="flex flex-col sm:p-3">
-                <p>Today</p>
+                <p>{`${createAt.toLocaleDateString()}`}</p>
                 <div className="hidden mt-3 w-[100px] h-[100px] bg-cyan-400 sm:block"></div>
             </div>
             <div onClick={() => navigate('react_caveats')} className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5 cursor-pointer">
@@ -53,7 +54,7 @@ export default function Blog() {
             <p>Blog page under construction :P</p>
             <h1 className='mt-3 text-4xl'>My thoughts on programming, books, and fun things in life</h1>
             <div className="mt-16 sm:border-l-[0.5px] sm:border-l-slate-700 sm:pl-4 sm:mt-20">
-                {MD_JSON.map((data) => <BlogPostRow key={data.name} title={data.name} description={data.description} readingTime={data.readingTime} tags={data.tags} />)}
+                {MD_JSON.map((data) => <BlogPostRow key={data.name} createAt={new Date(data.createAt)} title={data.name} description={data.description} readingTime={data.readingTime} tags={data.tags} />)}
             </div>
         </div>
     )

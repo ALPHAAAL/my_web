@@ -3,6 +3,7 @@
         "name": "react_caveats",
         "description": "Some caveats on react useCallback / useMemo hook and re-renders",
         "tags": ["react"],
-        "readingTime": 5
+        "readingTime": 5,
+        "createAt": "2024-04-01T13:54:55.951Z"
     }
 ]
