@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import ImageMap, { hashToDataUrl } from '../../assets/img/hash-source-map'
+import { hashToDataUrl } from '../../utils/hash'
 import WorkIcon from '../../assets/icons/work.svg?react';
 
 import LazyImage from '../LazyImage';
@@ -15,8 +15,8 @@ type JobRole = {
     }[];
 }
 
-const VyondIcon = <LazyImage className='mr-3' width={35} height={35} src='assets/images/vyond.webp' placeholderImage={hashToDataUrl("X+sGDwJXSIeHeIiAepp32FeGhIr3qHgP")} />;
-const BenoveltyIcon = <LazyImage className='mr-3' width={35} height={35} src='assets/images/benovelty.webp' />;
+const VyondIcon = <LazyImage className='mr-3' width={35} height={35} src='vyond' placeholderImage={hashToDataUrl("X+sGDwJXSIeHeIiAepp32FeGhIr3qHgP")} />;
+const BenoveltyIcon = <LazyImage className='mr-3' width={35} height={35} src='benovelty' />;
 const VYOND_ROLES = [
     {
         title: 'Senior Software Engineer I',
@@ -92,7 +92,7 @@ export default function About() {
             <div className="w-full sm:mt-10">
                 <div className='grid grid-cols-1 gap-y-6 sm:pr-3 lg:grid-cols-2 lg:grid-rows-[auto_1fr]'>
                     <div className='lg:col-start-2 lg:pl-10'>
-                        <LazyImage src={ImageMap.ProfilePic.src} placeholderImage={ImageMap.ProfilePic.hash} />
+                        <LazyImage src={'DSC01603'} placeholderImage={hashToDataUrl('aggSDwKZaIiPd3h7h1d3iIh4dwVYN4AB')} />
                     </div>
                     <div className='lg:col-start-1 lg:row-start-1 lg:row-span-2'>
                         <h1 className="mt-3 text-6xl font-bold">Alex Lau</h1>

@@ -2,17 +2,17 @@
 import LazyImage from '../LazyImage';
 import SocialRow from "../SocialRow";
 
-import { hashToDataUrl } from '../../assets/img/hash-source-map';
+import { hashToDataUrl } from '../../utils/hash';
 import IMAGE_JSON from '../../assets/img/images.json';
 
 const images = Object.values(IMAGE_JSON).map(({ name, hash }) => {
     return (
-        <LazyImage key={hash} src={`/assets/images/${name}.webp`} placeholderImage={hashToDataUrl(hash)} className='max-h-[300px] xl:max-h-[400px]' />
+        <LazyImage key={hash} src={name} placeholderImage={hashToDataUrl(hash)} className='max-h-[300px] xl:max-h-[400px]' />
     );
 });
 const mobileImages = Object.values(IMAGE_JSON).map(({ name, hash }) => {
     return (
-        <LazyImage key={hash} src={`/assets/images/${name}.webp`} placeholderImage={hashToDataUrl(hash)} className='object-cover w-full' />
+        <LazyImage key={hash} src={name} placeholderImage={hashToDataUrl(hash)} className='object-cover w-full' />
     );
 });
 

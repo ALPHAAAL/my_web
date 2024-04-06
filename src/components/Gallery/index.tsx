@@ -1,11 +1,11 @@
 import LazyImage from '../LazyImage';
 
-import { hashToDataUrl } from '../../assets/img/hash-source-map';
+import { hashToDataUrl } from '../../utils/hash';
 import IMAGE_JSON from '../../assets/img/images.json';
 
 const images = Object.values(IMAGE_JSON).map(({ name, width, height, hash }) => {
     return (
-        <LazyImage key={hash} src={`/assets/images/${name}.webp`} width={width} height={height} placeholderImage={hashToDataUrl(hash)} />
+        <LazyImage key={hash} src={name} width={width} height={height} placeholderImage={hashToDataUrl(hash)} />
     );
 });
 

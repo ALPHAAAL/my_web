@@ -28,12 +28,22 @@ async function generateHash() {
             imageToBeResize.webp().toFile(path.join(PUBLIC_ASSETS_DIR, `${imageBasename}.webp`));
         }
 
-        json[imageBasename] = {
-            name: imageBasename,
-            hash: thumbHashToBase64,
-            width,
-            height,
-        };
+        if (!fs.existsSync(path.join(PUBLIC_ASSETS_DIR, `${imageBasename}_mobile.webp`))) {
+            imageToBeResize.webp().resize({
+                width: width > 1000 ? Math.ceil(width / 3) : width,
+                height: width > 1000 ? Math.ceil(height / 3) : height,
+            }).toFile(path.join(PUBLIC_ASSETS_DIR, `${imageBasename}_mobile.webp`));
+        }
+
+        // TODO: Remove this later, improve logic
+        if (imageBasename !== 'DSC01603') {
+            json[imageBasename] = {
+                name: imageBasename,
+                hash: thumbHashToBase64,
+                width,
+                height,
+            };
+        }
     }
 
     console.log(json);

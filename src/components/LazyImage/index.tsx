@@ -18,6 +18,15 @@ export default function LazyImage(props: LazyImageProps) {
     }, [placeholderImage]);
 
     return (
-        <img className={className} style={style} src={src} decoding="async" loading="lazy" width={width} height={height} />
+        <img
+            className={className}
+            style={style}
+            src={`/assets/images/${src}.webp`}
+            srcSet={`/assets/images/${src}_mobile.webp 375w`}
+            decoding="async"
+            loading="lazy"
+            width={width}
+            height={height}
+        />
     )
 }
