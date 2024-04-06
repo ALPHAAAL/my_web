@@ -18,13 +18,13 @@ function Menu({ onMenuClose, isMenuOpen }: {
 
     return shouldRender && createPortal(
         (
-            <div ref={ref} id='menu' className={clsx(isMenuOpen ? 'animate-open-menu-corner' : 'animate-close-menu-corner', "font-mono flex flex-col justify-around fixed ring-1 ring-slate-800 rounded-2xl w-[90%] top-4 left-[5%] bg-slate-900 p-7")}>
+            <div ref={ref} id='menu' className={clsx(isMenuOpen ? 'animate-open-menu-corner' : 'animate-close-menu-corner', "font-mono flex flex-col justify-around fixed ring-1 ring-stone-400 dark:ring-slate-800 rounded-2xl w-[90%] top-4 left-[5%] bg-stone-200 dark:bg-slate-900 p-7")}>
                 <div className="h-[30px] flex justify-between">
-                    <p className="text-sm self-center text-slate-500">Navigation</p>
-                    <button onClick={onMenuClose}><CrossIcon className="text-slate-500" width={20} height={20} /></button>
+                    <p className="text-sm self-center text-stone-500 dark:text-slate-500">Navigation</p>
+                    <button onClick={onMenuClose}><CrossIcon className="text-stone-500 dark:text-slate-500" width={20} height={20} /></button>
                 </div>
                 <nav>
-                    <ul className="divide-y-[1px] py-2 divide-slate-800 text-base text-slate-300">
+                    <ul className="divide-y-[1px] py-2 divide-stone-400 dark:divide-slate-800 text-base text-stone-500 dark:text-slate-300">
                         <li className="py-1"><Link onClick={onMenuClose} to="/about">About</Link></li>
                         <li className="py-1"><Link onClick={onMenuClose} to="/gallery">Gallery</Link></li>
                         <li className="py-1"><Link onClick={onMenuClose} to="/blog">Blog</Link></li>
@@ -41,7 +41,7 @@ export default function NavigationMenu() {
 
     return (
         <>
-            <div className='sm:hidden flex flex-row justify-center w-[90px] border-2 rounded-3xl border-slate-800' onClick={() => setIsMenuOpen(true)}>
+            <div className='sm:hidden flex flex-row justify-center w-[90px] border-2 rounded-3xl border-stone-300 dark:border-slate-800' onClick={() => setIsMenuOpen(true)}>
                 <span className="self-center">Menu</span>
                 <span className="self-center"><CaretIcon /></span>
             </div>

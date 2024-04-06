@@ -26,8 +26,8 @@ export default function Home() {
                 <svg height="100" fill="transparent" stroke="currentColor" strokeWidth="2" className="stroke-fill-animation text-6xl sm:text-8xl font-bold bg-clip-text" width="100%">
                     <text dominantBaseline="middle" y="50%">Alex Lau</text>
                 </svg>
-                <div className="font-extrabold text-2xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
-                    I am a <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+                <div className="font-extrabold text-2xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-stone-600/60 to-slate-800 dark:from-slate-200/60 to-50% dark:to-slate-200">
+                    I am a <span className="text-teal-500 dark:text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
                         <ul className="block animate-text-slide-4 text-left leading-tight [&_li]:block">
                             <li className={TYPING_TEXT_CLASS_NAME}>Software Engineer</li>
                             <li className={TYPING_TEXT_CLASS_NAME}>Landscape Photographer</li>

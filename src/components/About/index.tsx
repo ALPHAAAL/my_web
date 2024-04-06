@@ -61,7 +61,7 @@ function JobRow(props: JobRole) {
                 {titles.map(({title, duration}) => (
                     <div key={title} className='flex flex-col mt-1 sm:flex-row justify-between sm:mt-2 text-xs'>
                         <p>{title}</p>
-                        <p className='mt-1 text-green-300/60 sm:mt-0'>{duration}</p>
+                        <p className='mt-1 text-red-300/60 dark:text-green-300/60 sm:mt-0'>{duration}</p>
                     </div>
                 ))}
             </div>
@@ -72,8 +72,8 @@ function JobRow(props: JobRole) {
 function ExperienceSection() {
     return (
         <div className='sm:pl-10 mt-5'>
-            <div className='w-full border-[0.5px] border-slate-50/25 p-6'>
-                <div className='flex flex-row pb-3 border-b-[0.5px] border-slate-50/25'>
+            <div className='w-full border-[1px] dark:border-[0.5px] border-stone-50 dark:border-slate-50/25 p-6'>
+                <div className='flex flex-row pb-3 border-b-[1px] dark:border-b-[0.5px] border-stone-50 dark:border-slate-50/25'>
                     <WorkIcon className='mr-3' width={28} height={28} />
                     <h1>Work</h1>
                 </div>

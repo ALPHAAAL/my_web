@@ -9,7 +9,7 @@ type TagProp = {
 
 function Tag({ children }: TagProp) {
     return (
-        <span className="bg-slate-700 p-1">{children}</span>
+        <span className="bg-stone-300 dark:bg-slate-700 p-1">{children}</span>
     )
 }
 
@@ -31,7 +31,7 @@ function BlogPostRow(props: BlogPostRowType) {
                 <p>{`${createAt.toLocaleDateString()}`}</p>
                 <div className="hidden mt-3 w-[100px] h-[100px] bg-cyan-400 sm:block"></div>
             </div>
-            <div onClick={() => navigate('react_caveats')} className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:bg-slate-400/5 cursor-pointer">
+            <div onClick={() => navigate('react_caveats')} className="sm:col-start-2 sm:col-span-3 flex flex-col sm:p-3 [&>*]:mb-2 hover:dark:bg-slate-400/5 cursor-pointer">
                 <p className="font-bold">{title}</p>
                 <p className="text-sm">{description}</p>
                 <div className="text-xs flex flex-row [&>*]:mr-1">
@@ -53,7 +53,7 @@ export default function Blog() {
         <div>
             <p>Blog page under construction :P</p>
             <h1 className='mt-3 text-4xl'>My thoughts on programming, books, and fun things in life</h1>
-            <div className="mt-16 sm:border-l-[0.5px] sm:border-l-slate-700 sm:pl-4 sm:mt-20">
+            <div className="mt-16 sm:border-l-[0.5px] sm:dark:border-l-slate-700 sm:pl-4 sm:mt-20">
                 {MD_JSON.map((data) => <BlogPostRow key={data.name} createAt={new Date(data.createAt)} title={data.name} description={data.description} readingTime={data.readingTime} tags={data.tags} />)}
             </div>
         </div>
