@@ -15,8 +15,8 @@ type JobRole = {
     }[];
 }
 
-const VyondIcon = <LazyImage className='mr-3' width={35} height={35} src='vyond' placeholderImage={hashToDataUrl("X+sGDwJXSIeHeIiAepp32FeGhIr3qHgP")} />;
-const BenoveltyIcon = <LazyImage className='mr-3' width={35} height={35} src='benovelty' />;
+const VyondIcon = <LazyImage className='mr-3' needSrcSet={false} width={35} height={35} src='vyond' placeholderImage={hashToDataUrl("X+sGDwJXSIeHeIiAepp32FeGhIr3qHgP")} />;
+const BenoveltyIcon = <LazyImage className='mr-3' needSrcSet={false} width={35} height={35} src='benovelty' />;
 const VYOND_ROLES = [
     {
         title: 'Senior Software Engineer I',
