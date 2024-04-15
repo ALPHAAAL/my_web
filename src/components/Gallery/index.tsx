@@ -5,7 +5,7 @@ import IMAGE_JSON from '../../assets/img/images.json';
 
 const images = Object.values(IMAGE_JSON).map(({ name, width, height, hash }) => {
     return (
-        <LazyImage key={hash} src={name} width={width} height={height} placeholderImage={hashToDataUrl(hash)} />
+        <LazyImage className='mb-3' key={hash} src={name} width={width} height={height} placeholderImage={hashToDataUrl(hash)} />
     );
 });
 

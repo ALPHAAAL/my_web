@@ -8,9 +8,11 @@ import IMAGE_JSON from '../../assets/img/images.json';
 const images = Object.values(IMAGE_JSON).map(({ name, hash, width, height }) => {
     const sh = window.screen.height;
     const newHeight = sh > 1280 ? Math.min(400, height) : Math.min(300, height);
+    const scale = newHeight / height;
+    const newWidth = Math.floor(width * scale);
 
     return (
-        <LazyImage key={hash} src={name} height={newHeight} width={width} placeholderImage={hashToDataUrl(hash)} className='max-h-[300px] xl:max-h-[400px]' />
+        <LazyImage key={hash} src={name} height={newHeight} width={newWidth} placeholderImage={hashToDataUrl(hash)} className='max-h-[300px] xl:max-h-[400px]' />
     );
 });
 const mobileImages = Object.values(IMAGE_JSON).map(({ name, hash, width, height }) => {
