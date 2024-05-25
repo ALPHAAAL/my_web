@@ -32,8 +32,8 @@ export default function Layout() {
 
     return (
         <AppContext.Provider value={value}>
-            <div onClick={() => isMenuOpen && setIsMenuOpen(false)} className="h-max md:px-[10%] lg:px-[15%] bg-stone-300 dark:bg-slate-800 text-red-300 dark:text-green-300 overflow-hidden font-mono">
-                <div className={clsx("h-full flex flex-col bg-stone-200 dark:bg-slate-900 px-5", blurClassName)}>
+            <div onClick={() => isMenuOpen && setIsMenuOpen(false)} className="h-max md:px-[10%] lg:px-[15%] bg-stone-300 dark:bg-slate-800 text-red-300 dark:text-green-300 overflow-hidden font-mono transition-colors duration-[200ms]">
+                <div className={clsx("h-full flex flex-col bg-stone-200 dark:bg-slate-900 px-5 transition-colors", blurClassName)}>
                     <div className="flex flex-col min-h-screen py-3">
                         <div className="flex justify-between mb-5 h-[40px]">
                             <Link to='/'><MyIcon className='text-black dark:text-white cursor-pointer' width={40} height={40} /></Link>
