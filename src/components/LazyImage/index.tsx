@@ -1,13 +1,16 @@
 import React, { useMemo } from "react"
-import clsx from "clsx";
+import { motion } from "framer-motion";
+
+import { cn } from "../../utils/utils";
 
 type LazyImageProps = React.ComponentProps<'img'> & {
     placeholderImage?: string;
     needSrcSet?: boolean
+    hash?: string;
 };
 
 export default function LazyImage(props: LazyImageProps) {
-    const { needSrcSet = true, placeholderImage, src, width, height, className } = props;
+    const { needSrcSet = true, placeholderImage, src, width, height, className, hash } = props;
 
     const style: React.CSSProperties = useMemo(() => {
         return {
@@ -20,8 +23,9 @@ export default function LazyImage(props: LazyImageProps) {
     }, [placeholderImage]);
 
     return (
-        <div style={style} className={clsx("flex-none self-center", className)}>
-            <img
+        <div style={style} className={cn("flex-none self-center", className)}>
+            <motion.img
+                layoutId={`image-${hash}-image`}
                 src={`/assets/images/${src}.webp`}
                 srcSet={needSrcSet ? `/assets/images/${src}.webp 1920w, /assets/images/${src}_mobile.webp 375w` : undefined}
                 decoding="async"
