@@ -54,10 +54,10 @@ export default function Layout() {
                     </div>
                     <div className="pb-3 border-t border-red-300 dark:border-green-300" />
                     <div className="flex text-xs text-center mt-5 mb-8 sm:px-5 sm:justify-between justify-around">
-                        <h1 className="hidden sm:block sm:w-[30%]">Wisdom has been chasing me, but I have alawys been faster.</h1>
+                        <h1 className="hidden sm:block sm:w-[30%]">Wisdom has been chasing me, but I have always been faster.</h1>
                         <h1 className="sm:w-[30%]">
                             Built and designed by me, with React & Tailwind CSS <br />
-                            2024 Alex Lau. All rights reserved.
+                            2025 Alex Lau. All rights reserved.
                         </h1>
                     </div>
                 </div>

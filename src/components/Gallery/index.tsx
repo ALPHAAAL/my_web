@@ -10,12 +10,11 @@ const Skeleton = () => {
     return (
       <div>
         <p className="font-bold md:text-4xl text-xl text-white">
-          Rivers are serene
+          Title to be filled in later...
         </p>
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          A house by the river is a place of peace and tranquility. It&apos;s the
-          perfect place to relax, unwind, and enjoy life.
+          To be filled in later...
         </p>
       </div>
     );
