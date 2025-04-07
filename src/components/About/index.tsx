@@ -15,12 +15,19 @@ type JobRole = {
     }[];
 }
 
+const CdcIcon = <LazyImage className='mr-3' needSrcSet={false} width={35} height={35} src='cdc' />;
 const VyondIcon = <LazyImage className='mr-3' needSrcSet={false} width={35} height={35} src='vyond' />;
 const BenoveltyIcon = <LazyImage className='mr-3' needSrcSet={false} width={35} height={35} src='benovelty' />;
+const CRYPTO_COM_ROLES = [
+    {
+        title: 'Fullstack Engineer',
+        duration: 'Aug 2024 - Present',
+    },
+];
 const VYOND_ROLES = [
     {
         title: 'Senior Software Engineer I',
-        duration: 'Aug 2023 - Present',
+        duration: 'Aug 2023 - Aug 2024',
     },
     {
         title: 'Software Engineer II',
@@ -78,6 +85,7 @@ function ExperienceSection() {
                     <h1>Work</h1>
                 </div>
                 <ol className='mt-5 [&>*]:mt-3'>
+                    <li><JobRow key='cdc' companyName='Crypto.com' titles={CRYPTO_COM_ROLES} icon={CdcIcon} /></li>
                     <li><JobRow key='vyond' companyName='Vyond' titles={VYOND_ROLES} icon={VyondIcon} /></li>
                     <li><JobRow key='bn' companyName='beNovelty' titles={BN_ROLES} icon={BenoveltyIcon} /></li>
                 </ol>
